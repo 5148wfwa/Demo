@@ -10,14 +10,17 @@ import lombok.Cleanup;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.example.MessageProtocol;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Scanner;
 
-
+@SpringBootApplication
 public class User1 {
 
     @SneakyThrows
     public static void main(String[] args) {
+        SpringApplication.run(User1.class, args);
         @Cleanup("shutdownGracefully") EventLoopGroup workerGroup = new NioEventLoopGroup();
         Bootstrap bootstrap = new Bootstrap()
                 .group(workerGroup)
@@ -34,7 +37,7 @@ public class User1 {
                 });
         ChannelFuture channelFuture = bootstrap.connect("127.0.0.1", 9000).sync();
         Channel channel = channelFuture.channel();
-        System.out.println("欢迎进入聊天室");
+        System.out.println("欢迎进入聊天室，请输入文字消息进行聊天");
         //客户端输入信息
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNextLine()) {

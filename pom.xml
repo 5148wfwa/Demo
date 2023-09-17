@@ -17,7 +17,7 @@
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
-
+ <packaging>pom</packaging>
     <dependencies>
            <dependency>
                <groupId>io.netty</groupId>
@@ -31,6 +31,12 @@
                <version>1.18.12</version>
            </dependency>
     </dependencies>
+     <modules>
+
+      <module>user1</module>
+      <module>user2</module>
+      <module>server</module>
+      </modules>
   <build>
         <plugins>
             <plugin>

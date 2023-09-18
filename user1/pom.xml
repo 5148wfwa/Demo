@@ -29,25 +29,19 @@
                   <version>4.11</version>
                   <scope>test</scope>
                 </dependency>
-            <dependency>
+                    <dependency>
                             <groupId>org.springframework.boot</groupId>
                             <artifactId>spring-boot-starter-tomcat</artifactId>
                         </dependency>
+                  <dependency>
+                        <groupId>org.example</groupId>
+                        <artifactId>baseuntil</artifactId>
+                        <version>1.0-SNAPSHOT</version>
+                   </dependency>
             		<dependency>
             			<groupId>org.springframework.boot</groupId>
             			<artifactId>spring-boot-starter-web</artifactId>
             		</dependency>
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-all</artifactId>
-                <version>4.1.51.Final</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>1.18.12</version>
-            </dependency>
      </dependencies>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
     <build>
